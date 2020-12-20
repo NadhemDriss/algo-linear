@@ -1,0 +1,39 @@
+Algorithme 2-sol1:
+
+
+var 
+tab1,tab2:array-of integer[];
+i,j:integer;
+sum1:integer:=0;
+
+
+begin
+
+read(tab1);
+read(tab2);
+
+for i from 0 tab1.lenghth-1 do 
+j:=0;
+while tab2[j]<>tab1[i] do
+j++;
+end while;
+if (j<>tab2.length-1)
+sum1+=tab1[i]
+endif;
+endfor;
+
+
+
+for i from 0 tab2.lenghth-1 do 
+j:=0;
+while tab1[j]<>tab2[i] do
+j++;
+end while;
+if (j<>tab1.length-1)
+sum1+=tab2[i]
+endif;
+endfor;
+
+print("la somme des élement est",sum1);
+end.
+

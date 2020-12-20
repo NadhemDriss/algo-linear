@@ -1,0 +1,51 @@
+algorithme 2-sol2
+
+
+var
+ tab1,tab2:array-of integer[];
+ sum : integer := 0;
+ 
+ i,j,count:integer;
+ h:hash_table<integer ,integer>
+ 
+
+begin
+
+
+ read(tab1);
+ read(tab2);
+
+  for i from 0 to tab1.length do
+      elem=tab1[i]
+     if (h.lookup(tab1[i]) = true ) then
+       count:= h.get(tab1[i]);
+       h.insert(tab1[i],count+1);
+
+     else
+        count:=1;
+         h.insert(tab1[i],count);
+    endif
+    endfor
+
+
+     for i from 0 to tab2.length do
+      elem=tab2[i]
+     if (h.lookup(tab2[i]) = true ) then
+       count:= h.get(tab2[i]);
+       h.insert(tab2[i],count+1);
+
+     else
+        count:=1;
+         h.insert(tab2[i],count);
+    endif
+    endfor
+
+
+     tab=h.getkeys();
+    for i from 0 to tab.length-1 
+       if(h.get(tab[i]>1)
+       sum:=sum+tab[i]*2;
+       endif
+    endfor
+    write("la somme des élements est:", sum);
+    end
